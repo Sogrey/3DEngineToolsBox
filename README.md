@@ -3,6 +3,7 @@
 
 > 内部私有资料
 
+[3DEngineToolsBox使用手册](https://sogrey.github.io/3DEngineToolsBox/3DEngineToolsBoxHandbook)
 
 
 ### 更新日志
