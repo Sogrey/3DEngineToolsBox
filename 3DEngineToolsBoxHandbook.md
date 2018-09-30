@@ -1,5 +1,7 @@
 # 3DEngineToolsBox使用手册
 
+        3DEngineToolsBox是引擎的二次封装
+
 ## contents
 1. [isDebug - 获取当前是debug模式还是relesea模式](#isDebug)
 1. [setSelectedModel - 加载模型（多个）](#setSelectedModel)
