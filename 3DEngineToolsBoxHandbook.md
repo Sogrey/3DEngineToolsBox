@@ -1,5 +1,7 @@
 # 3DEngineToolsBox使用手册
 
+[isDebug - 获取当前是debug模式还是relesea模式](#isDebug)
+
 ## 加载模型（多个）
 > setSelectedModel(json)
 
@@ -333,6 +335,7 @@ playRoam(positions,20)
 参数：
 * `debug` true:debug模式会输出日志，false:relesea模式不输出日志
 
+<span id = "isDebug"></span>
 ## 获取当前是debug模式还是relesea模式
 > isDebug()
 
