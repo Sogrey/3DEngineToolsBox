@@ -10,17 +10,14 @@
 > setSelectedModelAndPath(json, path)
 
 参数：
-* `json`把要加载的模型id和name做成特定格式的json串，
-                例如："[{\"modelId\":\"661\",\"modelName\":\"ZD_H_1F_S_0100\"},{\"modelId\":\"650\",\"modelName\":\"ZD_H_1F_A_0000\"}]"
-* `path` model文件夹下的一级目录，如果模型文件存放在根目录则为 "",如果分模块存放在不同子文件夹里，这里填写该子文件夹目录结构，
-                例如：在model文件夹下有个model01的目录存放第一阶段的模型，则path为 "model01/"
+* `json`把要加载的模型id和name做成特定格式的json串，例如："[{\"modelId\":\"661\",\"modelName\":\"ZD_H_1F_S_0100\"},{\"modelId\":\"650\",\"modelName\":\"ZD_H_1F_A_0000\"}]"
+* `path` model文件夹下的一级目录，如果模型文件存放在根目录则为 "",如果分模块存放在不同子文件夹里，这里填写该子文件夹目录结构，例如：在model文件夹下有个model01的目录存放第一阶段的模型，则path为 "model01/"
 
 ## 加载模型（拓展方法）-加载网络模型
 > setSelectedModelWithUrl(json)
 
 参数：
-* `json` 把要加载的模型id和name做成特定格式的json串，
-                 例如："[{\"modelId\":\"20180930\",\"modelName\":\"[{\"modelId\":\"20180930\",\"modelName\":\"http://117.34.118.8:9011/BIMsample/BIMsampleList.json\"}]\"]"
+* `json` 把要加载的模型id和name做成特定格式的json串， 例如："[{\"modelId\":\"20180930\",\"modelName\":\"[{\"modelId\":\"20180930\",\"modelName\":\"http://117.34.118.8:9011/BIMsample/BIMsampleList.json\"}]\"]"
 
 ## 移除模型(多个)
 > removeMulModelsByIds(tags)
@@ -183,7 +180,8 @@
 > setClickMode(mode)
 
 参数：
-* `mode` 0:为查看模型,鼠标点击不响应任何事件；
+* `mode` 
+        0:为查看模型,鼠标点击不响应任何事件；
         1:为坐标拾取模式,触发鼠标点击模型构件的碰撞点坐标事件；
         2:为ID拾取模式,触发鼠标点击模型构件拾取构件的ID值事件；
         3:为ID拾取+坐标拾取模式,触发鼠标点击模型构件拾取构件的ID值和坐标值事件；
@@ -194,8 +192,8 @@
         8:为体积测量模式,响应鼠标点击模型构件计算模型体积测量方法；
         9:为重量测量模式,响应鼠标点击模型构件计算模型重量测量方法；目前引擎设置密度为固定值，参数可以修改
         -1:设置模型旋转中心点模式（这个是附加组合的，坐标拾取模式下点击模型设置模型中心点）
-        -2:设置构件隐藏（设置之后一次点击模型构件将依次隐藏，被隐藏的构件存在 mHidedGuids 里,如需恢复，从 mHidedGuids 里取出来做恢复操作：setActorsVisible(guids,true)）
-        -3:设置构件透明（设置之后一次点击模型构件将依次透明，被透明的构件存在 mTransparentGuids 里,如需恢复，从 mHidedGuids 里取出来做恢复操作：setActorsIsAlpha(guids,false)）
+        -2:设置构件隐藏（设置之后依次点击模型构件将依次隐藏，被隐藏的构件存在 mHidedGuids 里,如需恢复，从 mHidedGuids 里取出来做恢复操作：setActorsVisible(guids,true)）
+        -3:设置构件透明（设置之后依次点击模型构件将依次透明，被透明的构件存在 mTransparentGuids 里,如需恢复，从 mHidedGuids 里取出来做恢复操作：setActorsIsAlpha(guids,false)）
 
 ##  设置测量点击点是否校正
 > setAutoCorrection(isAuto)
