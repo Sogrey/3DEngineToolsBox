@@ -1,4 +1,4 @@
-# 3DEngineToolsBox使用手册 
+# 3DEngineToolsBox使用手册
 
 ## 加载模型（多个）
 > setSelectedModel(json)
@@ -194,6 +194,8 @@
         8:为体积测量模式,响应鼠标点击模型构件计算模型体积测量方法；
         9:为重量测量模式,响应鼠标点击模型构件计算模型重量测量方法；目前引擎设置密度为固定值，参数可以修改
         -1:设置模型旋转中心点模式（这个是附加组合的，坐标拾取模式下点击模型设置模型中心点）
+        -2:设置构件隐藏（设置之后一次点击模型构件将依次隐藏，被隐藏的构件存在 mHidedGuids 里,如需恢复，从 mHidedGuids 里取出来做恢复操作：setActorsVisible(guids,true)）
+        -3:设置构件透明（设置之后一次点击模型构件将依次透明，被透明的构件存在 mTransparentGuids 里,如需恢复，从 mHidedGuids 里取出来做恢复操作：setActorsIsAlpha(guids,false)）
 
 ##  设置测量点击点是否校正
 > setAutoCorrection(isAuto)
