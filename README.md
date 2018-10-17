@@ -1,5 +1,6 @@
 ## 3DEngineToolsBox使用手册
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/edf7a0601bff4850bee9a736bb0b9185)](https://www.codacy.com/app/Sogrey/3DEngineToolsBox?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Sogrey/3DEngineToolsBox&amp;utm_campaign=Badge_Grade)
 
 > 内部私有资料
 
