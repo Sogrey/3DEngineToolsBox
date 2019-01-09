@@ -1,8 +1,7 @@
 # 3DEngineToolsBox使用手册
 
-        3DEngineToolsBox是引擎的二次封装
+        3DEngineToolsBox是引擎的二次封装,绝大部分api不需要再次封装直接调用即可（详见：[官方api](http://glendale.com.cn/template/default/Twodevelopment/api.html)），这里封装的是部分api，或为方便调用，或为将某些复杂组合封装起来,本次封装仅是个人见解可供参考，最终以官方api为准
 
-## contents
 1. [setSelectedModel - 加载模型（多个）](#setSelectedModel)
 1. [setSelectedModelAndPath -加载模型-自定义子目录](#setSelectedModelAndPath)
 1. [setSelectedModelWithUrl - 加载模型（拓展方法）-加载网络模型](#setSelectedModelWithUrl)
@@ -50,21 +49,27 @@
 1. [clearSelectedGuids - 清除之前已选中的构件ID](#clearSelectedGuids)
 1. [resetModels - 模型整体恢复默认](#resetModels)
 1. [setDebug - 设置是否debug模式](#setDebug)
-1. [isDebug - 获取当前是debug模式还是relesea模式](#isDebug)
+1. [isDebug - 获取当前是debug模式还是release模式](#isDebug)
 
 <span id = "setSelectedModel"></span>
 ## 加载模型（多个）
 > setSelectedModel(json)
 
 参数：
-* `json` 把要加载的模型id和name做成特定格式的json串，例如："[{\"modelId\":\"661\",\"modelName\":\"ZD_H_1F_S_0100\"},{\"modelId\":\"650\",\"modelName\":\"ZD_H_1F_A_0000\"}]"
+* `json` 把要加载的模型id和name做成特定格式的json串，例如：
+``` json
+[{"modelId":"661","modelName":"ZD_H_1F_S_0100"},{"modelId":"650","modelName":"ZD_H_1F_A_0000"}]
+```
 
 <span id = "setSelectedModelAndPath"></span>
 ## 加载模型-自定义子目录
 > setSelectedModelAndPath(json, path)
 
 参数：
-* `json`把要加载的模型id和name做成特定格式的json串，例如："[{\"modelId\":\"661\",\"modelName\":\"ZD_H_1F_S_0100\"},{\"modelId\":\"650\",\"modelName\":\"ZD_H_1F_A_0000\"}]"
+* `json`把要加载的模型id和name做成特定格式的json串，例如：
+``` json
+[{"modelId":"661","modelName":"ZD_H_1F_S_0100"},{"modelId":"650","modelName":"ZD_H_1F_A_0000"}]
+```
 * `path` model文件夹下的一级目录，如果模型文件存放在根目录则为 "",如果分模块存放在不同子文件夹里，这里填写该子文件夹目录结构，例如：在model文件夹下有个model01的目录存放第一阶段的模型，则path为 "model01/"
 
 <span id = "setSelectedModelWithUrl"></span>
@@ -72,7 +77,10 @@
 > setSelectedModelWithUrl(json)
 
 参数：
-* `json` 把要加载的模型id和name做成特定格式的json串， 例如："[{\"modelId\":\"20180930\",\"modelName\":\"[{\"modelId\":\"20180930\",\"modelName\":\"http://117.34.118.8:9011/BIMsample/BIMsampleList.json\"}]\"]"
+* `json` 把要加载的模型id和name做成特定格式的json串， 例如：
+``` json
+[{"modelId": "20180930", "modelName": "http://117.34.118.8:9011/BIMsample/BIMsampleList.json"}]
+```
 
 <span id = "removeMulModelsByIds"></span>
 ## 移除模型(多个)
@@ -191,14 +199,16 @@
 * `isVisible` true显示 false隐藏
 
 <span id = "resetActors"></span>
-## 构件状态恢复，一般用于对构件做了颜色，透明，隐藏等设置后，调用此接口可以恢复到模型原始状态,引擎本不支持批量，这里恢复多个通过遍历实现
+## 构件状态恢复
+一般用于对构件做了颜色，透明，隐藏等设置后，调用此接口可以恢复到模型原始状态,引擎本不支持批量，这里恢复多个通过遍历实现
 > resetActors(guids) 
 
 参数：
 * `guids` 多个构件ID用“,”或“#”间隔
 
 <span id = "highLightActors"></span>
-## 构件高亮，高亮的构件永远处于渲染的最前端，别的构件挡不住
+## 构件高亮
+高亮的构件永远处于渲染的最前端，别的构件挡不住
 > highLightActors(guids, r, g, b)
 
 参数：
@@ -438,14 +448,14 @@ playRoam(positions,20)
 > setDebug(debug)
 
 参数：
-* `debug` true:debug模式会输出日志，false:relesea模式不输出日志
+* `debug` true:debug模式会输出日志，false:release模式不输出日志
 
 <span id = "isDebug"></span>
-## 获取当前是debug模式还是relesea模式
+## 获取当前是debug模式还是release模式
 > isDebug()
 
 参数：
 * 无
 
 返回：
-* true:debug模式会输出日志，false:relesea模式不输出日志
+* true:debug模式会输出日志，false:release模式不输出日志
