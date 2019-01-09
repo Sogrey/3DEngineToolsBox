@@ -1,6 +1,6 @@
 # 3DEngineToolsBox使用手册
 
-        3DEngineToolsBox是引擎的二次封装,绝大部分api不需要再次封装直接调用即可（详见：[官方api](http://glendale.com.cn/template/default/Twodevelopment/api.html)），这里封装的是部分api，或为方便调用，或为将某些复杂组合封装起来,本次封装仅是个人见解可供参考，最终以官方api为准
+> 3DEngineToolsBox是引擎的二次封装,绝大部分api不需要再次封装直接调用即可（详见：[官方api](http://glendale.com.cn/template/default/Twodevelopment/api.html)），这里封装的是部分api，或为方便调用，或为将某些复杂组合封装起来,本次封装仅是个人见解可供参考，最终以官方api为准
 
 1. [setSelectedModel - 加载模型（多个）](#setSelectedModel)
 1. [setSelectedModelAndPath -加载模型-自定义子目录](#setSelectedModelAndPath)
